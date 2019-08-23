@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>	</title>
+</head>
+<body>
+<div style="height: 100px;width: 100px;background-color: green" class="color point"></div>
+<div style="height: 100px;width: 100px;background-color: green" class="color point"></div>
+<div style="height: 100px;width: 100px;background-color: green" class="color point"></div>
+<input type="text" class="input">
+</body>
+<script type="text/javascript">
+	let color =document.querySelectorAll(".color")
+	let point=document.querySelector(".point")
+	
+	point=0
+	
+		let rand = Math.random()*2 //случайное число до 5
+		let round = Math.round(rand) //округлить число 
+	color[round].key="lol"
+	color.onclick = function(){
+	
+		if (point ==0 ) {//условие	
+			point=2
+			color.style.backgroundColor="red"
+		}else if (point==2){
+			point=3
+			color.style.backgroundColor="green"
+		}else if (point==3) {
+				color.style.backgroundColor="orange"
+				point=4
+		}else{
+				point=4
+					color.style.backgroundColor="black"
+				point=0
+		}
+	}
+		 let lol = function() {
+		 		let inp=document.querySelector(".input")
+		 		console.log(inp)
+		 		console.dir(inp)
+		 }
+for(let index = 0; index<3; index = index + 1){//цикл
+	color[index].onclick = function(){
+		if(color[index].key=="lol"){
+			alert('угадал')
+		}else{
+			alert("не угадал")
+		}
+	}
+}
+
+</script>
+</html>
